@@ -14,4 +14,5 @@ class Item(models.Model): #creating the columns in the table
     price = models.DecimalField(decimal_places=2)
     meal_type = models.CharField(choice=MEAL_TYPE)
     author = models.ForeignKey(User, on_delete=models.CASCADE) #if an author makes a meal, and if he is removed from the users, all his created items
-    # will be deleted, or if you want to save the meals created, you should use the code models.PROTECT
+    # will be deleted, or if you want to save the meals created, you should use the code models.PROTECT, if you use models.SET_NULL,
+    # the items or meals will be retained but the author will be set to a no value, if the author is deleted
