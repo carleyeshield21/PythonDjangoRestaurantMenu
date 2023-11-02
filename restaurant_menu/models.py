@@ -4,7 +4,8 @@ from django.db import models
 MEAL_TYPE = (
     ('starters', 'Starters'),
     ('salads', 'Salads'),
-
+    ('main_dishes', 'Main Dishes'),
+    ('desserts', 'Desserts')
 )
 class Item(models.Model): #creating the columns in the table
     meal = models.CharField(max_length=1000, unique=True) #unique to avoid duplicate values
