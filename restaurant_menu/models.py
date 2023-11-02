@@ -25,3 +25,6 @@ class Item(models.Model): #creating the columns in the table
     status = models.IntegerField(choices=STATUS, default=0)
     date_created = models.DateTimeField(auto_now=True) #will generated date-time stamps whenever a meal is created
     date_updated = models.DateTimeField(auto_now=True) #will generated date-time stamps whenever a meal is created
+
+    def __str__(self):
+        return self.meal
