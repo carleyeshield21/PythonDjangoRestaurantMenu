@@ -17,3 +17,4 @@ def print_hi(name):
 # django-admin startproject mysite .
 # python manage.py startapp restaurant_menu
 # python manage.py makemigrations => required to create a directory for the database
+# python manage.py migrate => followed by this command to execute the python file inside the migrations directory
