@@ -23,5 +23,5 @@ class Item(models.Model): #creating the columns in the table
     # will be deleted, or if you want to save the meals created, you should use the code models.PROTECT, if you use models.SET_NULL,
     # the items or meals will be retained but the author will be set to a no value, if the author is deleted
     status = models.IntegerField(choices=STATUS, default=0)
-    date_created = models.DateTimeField(auto_now=True)
-    date_updated = models.DateTimeField(auto_now=True)
+    date_created = models.DateTimeField(auto_now=True) #will generated date-time stamps whenever a meal is created
+    date_updated = models.DateTimeField(auto_now=True) #will generated date-time stamps whenever a meal is created
