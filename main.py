@@ -10,8 +10,9 @@ def print_hi(name):
 
 
 # Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+# if __name__ == '__main__':
+#     print_hi('PyCharm')
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
-#
+# Terminal commands to start a new app in django
+# django-admin startproject mysite .
+# python manage.py startapp restaurant_menu
