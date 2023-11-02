@@ -18,4 +18,4 @@ def print_hi(name):
 # python manage.py startapp restaurant_menu
 # python manage.py makemigrations => required to create a directory for the database
 # python manage.py migrate => followed by this command to execute the python file inside the migrations directory, a db.sqlite3 file should be
-        # automatically created after executing this command
+        # automatically created after executing this command, this file can be viewed by using the DB Browser for SQLite
