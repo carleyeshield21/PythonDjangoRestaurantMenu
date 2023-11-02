@@ -16,4 +16,4 @@ def print_hi(name):
 # Terminal commands to start a new app in django
 # django-admin startproject mysite .
 # python manage.py startapp restaurant_menu
-# python manage.py makemigrations => to create a table
+# python manage.py makemigrations => required to create a directory for the database
