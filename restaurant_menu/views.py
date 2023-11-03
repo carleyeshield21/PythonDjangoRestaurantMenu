@@ -9,6 +9,10 @@ class MenuList(generic.ListView):
     # to the view, we must also make sure we go to the mysite directory, open settings.py and include 'templates' inside the TEMPLATES list inside
     # the 'DIRS' value, or you can transfer the templates folder inside the restaurant_menu
 
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = {'meals': 'Pecha Pie'}
+        return context
+
 class MenuItemDetail(generic.DetailView):
     model = Item
     template_name = 'menu_item_detail.html' #will be created in the directory
