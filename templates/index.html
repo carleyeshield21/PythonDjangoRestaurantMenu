@@ -10,10 +10,10 @@
 <!--        the .1 is the index-->
         <h1>{{ meal.1 }}</h1>
             {% for row in item_list %}
-            {% if row.meal_type == meal.0 %}
-                    <h2>{{ row.meal }}</h2>
-                        <p>{{ row.description }}</p>
-            {% endif %}
+                {% if row.meal_type == meal.0 %}
+                        <h2>{{ row.meal }}</h2>
+                            <p>{{ row.description }}</p>
+                {% endif %}
     <!--        <h3>{{ sangkap }}</h3>-->
             {% endfor %}
         {% endfor %}
