@@ -10,7 +10,9 @@ class MenuList(generic.ListView):
     # the 'DIRS' value, or you can transfer the templates folder inside the restaurant_menu
 
     def get_context_data(self, *, object_list=None, **kwargs):
-        context = {'meals': 'Pecha Pie'}
+        context = {'meals': ['Pecha Pie','Ispa-getti', 'friends pry'],
+                           'sangkap': ['mga', 'ingredients sa', 'pagluluto']
+                         }
         return context
 
 class MenuItemDetail(generic.DetailView):
