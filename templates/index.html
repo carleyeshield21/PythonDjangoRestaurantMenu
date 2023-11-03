@@ -11,8 +11,10 @@
         <h1>{{ meal.1 }}</h1>
             {% for row in item_list %}
                 {% if row.meal_type == meal.0 %}
-                        <h2>{{ row.meal }}</h2>
+                    {% if row.status == 0 %}
+                        <h2><del>{{ row.meal }}</del></h2>
                         <p>{{ row.description }}</p>
+                    {% endif %}
                 {% endif %}
     <!--        <h3>{{ sangkap }}</h3>-->
             {% endfor %}
