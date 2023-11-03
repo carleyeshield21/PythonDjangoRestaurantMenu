@@ -12,7 +12,7 @@
             {% for row in item_list %}
                 {% if row.meal_type == meal.0 %}
                     {% if row.status == 0 %}
-                        <h2><del>{{ row.meal }}</del></h2>
+                            <a href="https://food.grab.com/"><h2><del>{{ row.meal }}</del></h2></a>
 <!--                        <p>{{ row.description }}</p>-->
                     {% else  %}
                         <h2>{{ row.meal }}</h2>
