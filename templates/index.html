@@ -9,7 +9,11 @@
         {% for meal in meals %}
 <!--        the .1 is the index-->
         <h1>{{ meal.1 }}</h1>
+        {% for m in item_list %}
+                {{m.meal}}
+                {{m.description}}
 <!--        <h3>{{ sangkap }}</h3>-->
+        {% endfor %}
         {% endfor %}
 </body>
 </html>
