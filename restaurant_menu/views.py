@@ -11,7 +11,8 @@ class MenuList(generic.ListView):
     # the 'DIRS' value, or you can transfer the templates folder inside the restaurant_menu
 
     def get_context_data(self, *, object_list=None, **kwargs):
-        context = {}
+        # context = {}
+        context = super().get_context_data(**kwargs) #to output the dispay with the items
         context['meals'] = MEAL_TYPE
         return context
     # def get_context_data(self, *, object_list=None, **kwargs):
