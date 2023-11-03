@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.views import generic
 from .models import Item
+from .models import Item, MEAL_TYPE #from models.py
 
 # Create your views here.
 class MenuList(generic.ListView):
@@ -10,9 +11,8 @@ class MenuList(generic.ListView):
     # the 'DIRS' value, or you can transfer the templates folder inside the restaurant_menu
 
     def get_context_data(self, *, object_list=None, **kwargs):
-        context = {'meals': ['Pecha Pie','Ispa-getti', 'friends pry'],
-                           'sangkap': ['mga', 'ingredients sa', 'pagluluto']
-                         }
+        context = {}
+        context['meals'] = MEAL_TYPE
         return context
     # def get_context_data(self, *, object_list=None, **kwargs):
     #     context = {'meals': ['Pecha Pie','Ispa-getti', 'friends pry'],
