@@ -7,4 +7,4 @@ class MenuItemAdmin(admin.ModelAdmin):
     list_filter = ('status',) #a comma is necessary for python to read it as a tuple, otherwise it will result to an error
     search_fields = ('meal', 'description')
 
-# admin.site.register(Item, MenuItemAdmin) #to render the admin login page /admin
+admin.site.register(Item, MenuItemAdmin) #to render the admin login page /admin
