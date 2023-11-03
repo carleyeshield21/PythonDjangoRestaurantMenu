@@ -14,6 +14,11 @@ class MenuList(generic.ListView):
                            'sangkap': ['mga', 'ingredients sa', 'pagluluto']
                          }
         return context
+    # def get_context_data(self, *, object_list=None, **kwargs):
+    #     context = {'meals': ['Pecha Pie','Ispa-getti', 'friends pry'],
+    #                        'sangkap': ['mga', 'ingredients sa', 'pagluluto']
+    #                      }
+    #     return context
 
 class MenuItemDetail(generic.DetailView):
     model = Item
