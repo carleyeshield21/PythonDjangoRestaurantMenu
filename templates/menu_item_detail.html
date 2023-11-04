@@ -1,11 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Pahiram ng Menu</title>
-</head>
-<body>
-
+{% extends 'base.html' %}
+{% block content %}
     <h1>King Ina Menu Items</h1>
     <code>{{ item.meal }}</code>
     <br>
@@ -16,6 +10,4 @@
     <code>{{ item.date_created }}</code>
     <br>
     <code>${{ item.price }}</code>
-
-</body>
-</html>
+{% endblock content %}
