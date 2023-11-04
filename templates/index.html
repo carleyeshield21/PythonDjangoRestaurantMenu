@@ -1,22 +1,30 @@
 {% extends 'base.html' %}
 {% block content %}
+<div class="container">
     <h1>Restaurant Menu</h1>
-        {% for meal in meals %}
-<!--        the .1 is the index-->
-        <h1>{{ meal.1 }}</h1>
-            {% for row in item_list %}
-                {% if row.meal_type == meal.0 %}
-                    {% if row.status == 0 %}
-<!--                            see urls.py-->
-                            <a href="{% url 'menu_item' row.pk %}"><h2><del>{{ row.meal }}</del></h2></a>
-<!--                            <a href="https://food.grab.com/ph/en/"><h2><del>{{ row.meal }}</del></h2></a>-->
-<!--                        <p>{{ row.description }}</p>-->
-                    {% else  %}
-                        <h2>{{ row.meal }}</h2>
-                        <p>{{ row.description }}</p>
-                    {% endif %}
-                {% endif %}
-    <!--        <h3>{{ sangkap }}</h3>-->
-            {% endfor %}
-        {% endfor %}
+        <ul class="list-group list-group-flush">
+                {% for meal in meals %}
+        <!--        the .1 is the index-->
+                <h1 class="pt-5">{{ meal.1 }}</h1>
+                    {% for row in item_list %}
+                        {% if row.meal_type == meal.0 %}
+                            {% if row.status == 0 %}
+        <!--                            see urls.py-->
+                                    <li
+                                            class="list-group-item d-flex justify-content-between align-items-center border-0 pb-0">
+                                        <a href="{% url 'menu_item' row.pk %}"><h2><del>{{ row.meal }}</del></h2></a>
+                                        <span class="badge bg-primary rounded-pill">{{ row.price }}</span>
+                                    </li>
+        <!--                            <a href="https://food.grab.com/ph/en/"><h2><del>{{ row.meal }}</del></h2></a>-->
+        <!--                        <p>{{ row.description }}</p>-->
+                            {% else  %}
+                                <h2>{{ row.meal }}</h2>
+                                <p>{{ row.description }}</p>
+                            {% endif %}
+                        {% endif %}
+            <!--        <h3>{{ sangkap }}</h3>-->
+                    {% endfor %}
+                {% endfor %}
+        </ul>
+</div>
 {% endblock content %}
